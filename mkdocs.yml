@@ -15,3 +15,76 @@ extra:
 copyright: 'Copyright &copy; 2022 Queen of muntains'
 
 
+ 
+# Configuration
+theme:
+  name: material
+  # Static files
+  static_templates:
+    - 404.html
+  # Don't include MkDocs' JavaScript
+  include_search_page: false
+  search_index_only: true
+ 
+  # Default values, taken from mkdocs_theme.yml
+  language: en
+  features:
+    - content.tabs.link
+    #- navigation.sections
+    #- navigation.instant
+    - navigation.tabs
+    - navigation.tracking
+    - navigation.indexes
+    - search.highlight
+    - search.share
+    - search.suggest
+# Plugins
+plugins:
+  - search:
+      lang: en
+      separator: '[\s\-\.]+'
+      prebuild_index: true
+  - awesome-pages
+extra:
+  version: '1.0'
+  feedback: 'true'
+# Extensions
+markdown_extensions:
+  - attr_list
+  - meta
+  - markdown.extensions.extra
+  - smarty
+  - footnotes
+  - admonition
+  - abbr
+  - def_list
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.keys
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid-experimental
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+ 
+
